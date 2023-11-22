@@ -5,6 +5,8 @@ var items = document.getElementsByClassName('list-group-item');
 var addItemHeading = document.querySelector('#main h2.title');
 var thirdItem = document.getElementsByClassName('list-group-item')[2];
 var allItems = document.getElementsByClassName('list-group-item');
+var newItemByClass = document.getElementsByClassName('list-group-item')[4];
+var newItemByTag = document.getElementsByTagName('li')[4];
 
 headerTitle.innerHTML = '<h2>This is my Item Lister</h2>';
 header.style.borderBottom = 'solid 4px #000';
@@ -17,3 +19,8 @@ thirdItem.style.backgroundColor = 'green';
 for (var i = 0; i < allItems.length; i++) {
   allItems[i].style.fontWeight = 'bold';
 }
+
+newItemByClass.innerHTML = 'Modified by getElementsByClassName';
+newItemByClass.style.color = 'blue';
+newItemByTag.innerHTML = 'Modified by getElementsByTagName';
+newItemByTag.style.color = 'red';
