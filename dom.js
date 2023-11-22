@@ -5,8 +5,6 @@ var items = document.getElementsByClassName('list-group-item');
 var addItemHeading = document.querySelector('#main h2.title');
 var thirdItem = document.getElementsByClassName('list-group-item')[2];
 var allItems = document.getElementsByClassName('list-group-item');
-var newItemByClass = document.getElementsByClassName('list-group-item')[4];
-var newItemByTag = document.getElementsByTagName('li')[4];
 
 headerTitle.innerHTML = '<h2>This is my Item Lister</h2>';
 header.style.borderBottom = 'solid 4px #000';
@@ -20,7 +18,19 @@ for (var i = 0; i < allItems.length; i++) {
   allItems[i].style.fontWeight = 'bold';
 }
 
-newItemByClass.innerHTML = 'Modified by getElementsByClassName';
-newItemByClass.style.color = 'blue';
-newItemByTag.innerHTML = 'Modified by getElementsByTagName';
-newItemByTag.style.color = 'red';
+var secondItem = document.getElementsByClassName('list-group-item')[1];
+secondItem.style.backgroundColor = 'green';
+
+// Make the 3rd item invisible
+var thirdItem = document.getElementsByClassName('list-group-item')[2];
+thirdItem.style.display = 'none';
+
+// Using querySelectorAll, change the font color to green for the 2nd item
+var secondItemQS = document.querySelectorAll('#items li')[1];
+secondItemQS.style.color = '#006541';
+
+// Choose all odd elements and make their background green using querySelectorAll
+var oddItems = document.querySelectorAll('#items li:nth-child(odd)');
+for (var i = 0; i < oddItems.length; i++) {
+  oddItems[i].style.backgroundColor = 'green';
+}
